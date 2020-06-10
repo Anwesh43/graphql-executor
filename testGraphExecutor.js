@@ -25,6 +25,8 @@ async function executeQuery(query) {
     try {
         const response = await graphExecutor('{name, age, id}')
         console.log(JSON.stringify(response))
+        const d = await graphExecutor(`{name}`)
+        console.log(JSON.stringify(d))
     } catch(e) {
         console.log(e)
     }
